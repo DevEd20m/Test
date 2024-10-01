@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="views_horizontal_margin">16dp</dimen>
+    <dimen name="views_horizontal_minimum_margin">8dp</dimen>
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+    <dimen name="textview_super_title">32sp</dimen>
+    <dimen name="textview_title">24sp</dimen>
+    <dimen name="textview_subTitle">18sp</dimen>
+    <dimen name="textview_normal">16sp</dimen>
+    <dimen name="textview_subnormal">12sp</dimen>
+    <dimen name="views_corner_minimum">8dp</dimen>
+    <dimen name="views_corner_max">16dp</dimen>
+</resources>

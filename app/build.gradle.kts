@@ -2,20 +2,26 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+    id("androidx.room")
 }
 
 android {
     namespace = "com.faztbit.alwaopportunity"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.faztbit.alwaopportunity"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    room{
+        schemaDirectory("$projectDir/schemas")
     }
 
     buildTypes {
@@ -54,15 +60,31 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
 
-    implementation("androidx.navigation:navigation-fragment-ktx:$2.5.3")
-    implementation("androidx.navigation:navigation-ui-ktx:$2.5.3")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
 
     implementation("io.insert-koin:koin-core:3.2.1")
     implementation("io.insert-koin:koin-android:3.2.1")
     implementation("io.coil-kt:coil:2.5.0")
 
-    implementation("io.data2viz.charts:core:1.1.0-eap1")
-    implementation("io.data2viz.d2v:viz:0.8.12")
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+
+
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
+
+
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    implementation("io.coil-kt:coil:2.5.0")
+
+    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9")
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 }
