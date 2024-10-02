@@ -1,9 +1,8 @@
 package com.faztbit.alwaopportunity.domain.models
 
-import com.faztbit.alwaopportunity.data.database.models.PriorityRoom
-
 data class MachineDomain(
-    val id: Int,
+    val id: Int? = null,
     val name: String,
+    val dateTime: String,
     val priority: String
 )

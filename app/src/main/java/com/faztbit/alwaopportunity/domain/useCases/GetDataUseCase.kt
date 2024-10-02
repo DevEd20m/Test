@@ -1,4 +1,4 @@
-package com.faztbit.alwaopportunity.domain
+package com.faztbit.alwaopportunity.domain.useCases
 
 import com.faztbit.alwaopportunity.data.repository.MainRepository
 import com.faztbit.alwaopportunity.domain.mappers.GeneralMapper

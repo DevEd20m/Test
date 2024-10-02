@@ -1,6 +1,5 @@
 package com.faztbit.alwaopportunity.data.database.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -12,9 +11,9 @@ import com.faztbit.alwaopportunity.data.database.models.MachineRoom
 interface DataBaseDao {
 
     @Insert
-    suspend fun registerMachine(machine: MachineRoom)
+    suspend fun registerMachine(machine: MachineRoom): Long
 
-    @Query("SELECT id, name, priority FROM Machine")
+    @Query("SELECT id, name,dateTime, priority FROM Machine")
     suspend fun getAllMachines(): List<MachineRoom>
 
     @Update

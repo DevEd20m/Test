@@ -87,4 +87,6 @@ dependencies {
 
     implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9")
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
+
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

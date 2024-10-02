@@ -11,6 +11,8 @@ data class MachineRoom(
     val id: Int = 0,
     @ColumnInfo("name")
     val name: String,
+    @ColumnInfo("dateTime")
+    val dateTime: String,
     @ColumnInfo("priority")
     val priority: String
 )
